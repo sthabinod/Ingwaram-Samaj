@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font styling -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Document</title>
+</head>
+<style>
+    section {
+        padding: 20px;
+        width: 100%;
+        margin: 40px auto;
+    }
+    
+    section ul {
+        display: flex;
+        margin-bottom: 10px;
+    }
+    
+    section ul li {
+        list-style: none;
+        background-color: #eee;
+        padding: 8px 20px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        background-color: #eb2f64;
+        color: white;
+        font-size: 18px;
+    }
+    
+    section ul li:active {
+        background-color: #FF3366;
+        color: white;
+    }
+    
+    .product {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .image {
+        width: 100%;
+        height: 300px;
+    }
+    
+    .product .itemBox {
+        margin: 20px;
+    }
+    
+    .product .itemBox img {}
+</style>
+
+<body>
+    <div class="main-box">
+        <header class="header">
+            <div class="header__logo">
+                <img src="../images/logo.jpg" alt="" class="header__logo-img">
+                <img src="../images/name.png" alt="" class="header__name-img">
+
+            </div>
+
+            <ul class="header__nav">
+                <li class="header__item"> <a href="../index.htm" class="header__link header__link-active">Home</a> </li>
+                <li class="header__item"> <a href="./about.htm" class="header__link">About</a> </li>
+                <li class="header__item"> <a href="./gallery.html" class="header__link">Gallery</a> </li>
+                <li class="header__item"> <a href="" class="header__link">Generalogy</a> </li>
+                <li class="header__item"> <a href="../pages/signs.htm" class="header__link">Our History</a> </li>
+                <li class="header__item"> <a href="../pages/writer.htm" class="header__link">Writer Description</a> </li>
+                <li class="header__item"> <a href="../pages/front.htm" class="header__link">Front Person</a> </li>
+                <li class="header__item"> <a href="./contact.htm" class="header__link">Contact us</a> </li>
+            </ul>
+        </header>
+
+        <section>
+            <ul>
+                <li class="list" data-filter="All">All</li>
+                <li class="list" data-filter="mobile">Mobile</li>
+                <li class="list" data-filter="computer">Computer</li>
+                <li class="list" data-filter="laptop">Laptop</li>
+                <li class="list" data-filter="pc">PC</li>
+            </ul>
+            <div class="product">
+                <div class="itemBox mobile"><img class="image" src="../images/img1.jpeg" alt=""></div>
+                <div class="itemBox mobile"><img class="image" src="../images/img2.jpg" alt=""></div>
+                <div class="itemBox computer"><img class="image" src="../images/img3.jpg" alt=""></div>
+                <div class="itemBox laptop"><img class="image" src="../images/img4.jpg" alt=""></div>
+                <div class="itemBox pc"><img class="image" src="../images/img5.jpg" alt=""></div>
+
+            </div>
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.list').click(function() {
+                    const value = $(this).attr('data-filter');
+                    if (value == 'All') {
+                        $('.itemBox').show('1000');
+                    } else {
+                        $('.itemBox').not('.' + value).hide('1000');
+                        $('.itemBox').filter('.' + value).show('1000');
+                    }
+                })
+            })
+        </script>
+</body>
+
+</html>

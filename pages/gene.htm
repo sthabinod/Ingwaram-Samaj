@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tree view from unordered list</title>
+    <link rel="stylesheet" href="../css/main.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="../images/logo.jpg" alt="" class="header__logo-img">
+            <img src="../images/name.png" alt="" class="header__name-img">
+        </div>
+
+        <ul class="header__nav">
+            <li class="header__item"> <a href="../index.htm" class="header__link header__link-active">Home</a> </li>
+            <li class="header__item"> <a href="./about.htm" class="header__link">About</a> </li>
+            <li class="header__item"> <a href="./gallery.html" class="header__link">Gallery</a> </li>
+            <li class="header__item"> <a href="" class="header__link">Generalogy</a> </li>
+            <li class="header__item"> <a href="./signs.htm" class="header__link">Generalogy Signs</a> </li>
+            <li class="header__item"> <a href="./contact.htm" class="header__link">Contact us</a> </li>
+        </ul>
+    </header>
+
+    <figure>
+        <figcaption>Example sitemap</figcaption>
+        <ul class="tree">
+            <li><span>Home</span>
+                <ul>
+                    <li><span>About us</span>
+                        <ul>
+
+                            <li><span>Our board</span>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li><span>Our products</span>
+                        <ul>
+
+                            <li><span>The McGuffin V2</span>
+                                <ul>
+                                    <li><span>Order form</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><span>Contact us</span>
+                        <ul>
+
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </figure>
+    <p><a href="https://medium.com/@ross.angus/sitemaps-and-dom-structure-from-nested-unordered-lists-eab2b02950cf" target="_blank">Full writeup</a></p>
+    <!-- partial -->
+
+</body>
+
+</html>
