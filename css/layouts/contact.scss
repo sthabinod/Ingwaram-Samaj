@@ -6,6 +6,9 @@
         margin-right: 40px;
         background-color: white;
         flex: 1 0 50%;
+        @include respond(tab-port) {
+            margin-right: 0;
+        }
     }
     &__right-contact {
         flex: 0 0 50%;

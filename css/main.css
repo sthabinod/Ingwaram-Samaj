@@ -240,6 +240,13 @@ COLORS
   display: flex;
 }
 
+@media (max-width: 900px) {
+  .content {
+    padding: 0px;
+    padding-top: 20px;
+  }
+}
+
 .content__left-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -249,6 +256,12 @@ COLORS
       -ms-flex-direction: column;
           flex-direction: column;
   margin-right: 40px;
+}
+
+@media (max-width: 900px) {
+  .content__left-box {
+    margin: 0px;
+  }
 }
 
 .content__card-left {
@@ -340,6 +353,12 @@ COLORS
   -webkit-box-flex: 1;
       -ms-flex: 1 0 50%;
           flex: 1 0 50%;
+}
+
+@media (max-width: 900px) {
+  .content__left-contact {
+    margin-right: 0;
+  }
 }
 
 .content__right-contact {

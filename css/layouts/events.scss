@@ -3,10 +3,17 @@
 .content {
     padding: $main-padding;
     display: flex;
+    @include respond(tab-port) {
+        padding: 0px;
+        padding-top: 20px;
+    }
     &__left-box {
         display: flex;
         flex-direction: column;
         margin-right: 40px;
+        @include respond(tab-port) {
+            margin: 0px;
+        }
     }
     &__card-left {
         padding: 30px 30px 30px 30px;
